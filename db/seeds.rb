@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+p 'Users destroyed'
+Playlist.destroy_all
+p 'Playlist destroyed'
+
+users = User.create([{
+  first_name: 'Patrick',
+  last_name: 'Vignaud',
+  email:'pvignaud@yahoo.fr',
+  password: 'patrick',
+  spotify_account: 'raphaelfinance'}])
+
+p users
+
+playlists = Playlist.create([{ title: 'Anniv Severine', user_id: 1}, { title: '50ans Bruno', user_id: 1}])
+
+p playlists
