@@ -1,0 +1,2 @@
+class VotedSong < ApplicationRecord
+end
