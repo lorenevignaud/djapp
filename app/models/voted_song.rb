@@ -1,4 +1,4 @@
 class VotedSong < ApplicationRecord
-  belong_to :songs
+  belongs_to :song
   belongs_to :playlist
 end
