@@ -1,2 +1,16 @@
-<h1>Playlists#show</h1>
-<p>Find me in app/views/playlists/show.html.erb</p>
+<div class="back-btn">
+  <%= link_to "Back to all playlists", playlists_path, class: 'btn btn-light' %>
+</div>
+
+
+<div class="inline-action">
+  <h1><%= @playlist.title %></h1>
+  <div class="action">
+    <p> <%= link_to "Edit", edit_playlist_path(@playlist) %></p>
+    <p> <%= link_to "Delete", playlist_path(@playlist), method: :delete, data: { confirm: "Are you sure?" } %></p>
+  </div>
+</div>
+
+
+
+

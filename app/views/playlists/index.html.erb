@@ -1,11 +1,26 @@
-<h1>My playlists</h1>
-<p>Find me in app/views/playlists/index.html.erb</p>
+<div class="inline-title-btn">
+  <div>
+    <h1>All playlists</h1>
+  </div>
+  <div>
+    <p> <%= link_to "+ Add a new playlist", new_playlist_path, class: 'btn btn-primary' %></p>
+  </div>
+</div>
+
 
 <% @playlists.each do |playlist| %>
-<h2> <%= playlist.title %></h2>
-<% link_to playlist_path(playlist)  %>
+<div class="inline-action">
+  <div>
+    <h4> <%= link_to playlist.title, playlist_path(playlist) %> </h4>
+  </div>
+  <div class="action">
+    <p> <%= link_to "Edit", edit_playlist_path(playlist) %></p>
+    <p> <%= link_to "Delete", playlist_path(playlist), method: :delete, data: { confirm: "Are you sure?" } %></p>
+  </div>
+</div>
 <% end %>
 
-<%= link_to "Back to home", playlists_path %>
+
+
 
 

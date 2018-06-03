@@ -1,2 +1,17 @@
-<h1>Playlists#edit</h1>
-<p>Find me in app/views/playlists/edit.html.erb</p>
+<div class="back-btn">
+  <%= link_to "Back to all playlists", playlists_path, class: 'btn btn-light' %>
+</div>
+
+<h1>Edit the playlist</h1>
+
+<%= simple_form_for [@playlist] do |f| %>
+<%= f.input :title %>
+<div class="inline-btn">
+  <%= f.submit "Change the title", class: 'btn btn-primary' %>
+<% end %>
+  <div class="action">
+    <%= link_to "Cancel", playlists_path, class: 'btn btn-light' %>
+  </div>
+</div>
+
+
