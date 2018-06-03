@@ -13,8 +13,13 @@ class PlaylistsController < ApplicationController
   end
 
   def create
-    @playlist = Playlist.create(playlist_params)
-    redirect to playlists_path, notice: 'Playlist was successfully created.'
+    @playlist = Playlist.new(playlist_params)
+    @playlist.user = current_user
+    if @playlist.save
+      redirect_to playlists_path, notice: 'Playlist was successfully created.'
+    else
+      render :new
+    end
   end
 
   def edit

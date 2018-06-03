@@ -20,6 +20,12 @@ users = User.create([{
 
 p users
 
-playlists = Playlist.create([{ title: 'Anniv Severine', user_id: 1}, { title: '50ans Bruno', user_id: 1}])
+playlists = Playlist.create([{
+  title: 'Anniv Severine',
+  user_id: User.find_by_first_name("Patrick").id
+  },
+  {
+  title: '50ans Bruno',
+  user_id: User.find_by_first_name("Patrick").id}])
 
 p playlists
