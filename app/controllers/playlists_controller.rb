@@ -29,7 +29,7 @@ class PlaylistsController < ApplicationController
 
   def destroy
     @playlist = Playlist.find(params[:id])
-    @playlist.destrot(playlist_params)
+    @playlist.destroy
     redirect_to playlists_path, notice: 'Playlist was successfully deleted.'
   end
 

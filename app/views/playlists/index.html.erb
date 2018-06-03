@@ -1,8 +1,9 @@
 <h1>All playlists</h1>
 
 <% @playlists.each do |playlist| %>
-<h2> <%= link_to playlist.title, playlist_path(playlist) %> </h2>
+<h4> <%= link_to playlist.title, playlist_path(playlist) %> </h4>
 <p> <%= link_to "Edit playlist", edit_playlist_path(playlist) %></p>
+<p> <%= link_to "Delete playlist", playlist_path(playlist), method: :delete, data: { confirm: "Are you sure?" } %></p>
 <% end %>
 
 
