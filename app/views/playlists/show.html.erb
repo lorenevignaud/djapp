@@ -1,2 +1,8 @@
-<h1>Playlists#show</h1>
-<p>Find me in app/views/playlists/show.html.erb</p>
+<h1><%= @playlist.title %></h1>
+<p> <%= link_to "Edit playlist", edit_playlist_path(@playlist) %></p>
+
+
+<%= link_to "Back to all playlists", playlists_path %>
+
+
+

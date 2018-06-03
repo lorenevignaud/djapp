@@ -1,2 +1,6 @@
-<h1>Playlists#edit</h1>
-<p>Find me in app/views/playlists/edit.html.erb</p>
+<h1>Edit the playlist</h1>
+
+<%= simple_form_for [@playlist] do |f| %>
+<%= f.input :title %>
+<%= f.submit "Change the title", class: 'btn btn-primary' %>
+<% end %>

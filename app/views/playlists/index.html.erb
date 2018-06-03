@@ -1,11 +1,9 @@
-<h1>My playlists</h1>
-<p>Find me in app/views/playlists/index.html.erb</p>
+<h1>All playlists</h1>
 
 <% @playlists.each do |playlist| %>
-<h2> <%= playlist.title %></h2>
-<% link_to playlist_path(playlist)  %>
+<h2> <%= link_to playlist.title, playlist_path(playlist) %> </h2>
+<p> <%= link_to "Edit playlist", edit_playlist_path(playlist) %></p>
 <% end %>
 
-<%= link_to "Back to home", playlists_path %>
 
 
