@@ -1,9 +1,16 @@
-<h1><%= @playlist.title %></h1>
+<div class="back-btn">
+  <%= link_to "Back to all playlists", playlists_path, class: 'btn btn-light' %>
+</div>
 
-<p> <%= link_to "Edit playlist", edit_playlist_path(@playlist) %></p>
-<p> <%= link_to "Delete playlist", playlist_path(@playlist), method: :delete, data: { confirm: "Are you sure?" } %></p>
 
-<%= link_to "Back to all playlists", playlists_path %>
+<div class="inline-action">
+  <h1><%= @playlist.title %></h1>
+  <div class="action">
+    <p> <%= link_to "Edit", edit_playlist_path(@playlist) %></p>
+    <p> <%= link_to "Delete", playlist_path(@playlist), method: :delete, data: { confirm: "Are you sure?" } %></p>
+  </div>
+</div>
+
 
 
 

@@ -1,6 +1,10 @@
+<div class="back-btn">
+  <%= link_to "Back to all playlists", playlists_path, class: 'btn btn-light' %>
+</div>
+
 <h1>New Playlist</h1>
 
 <%= simple_form_for [@playlist] do |f| %>
-<%= f.input :title, placeholder: "Title", label: false %>
+<%= f.input :title, placeholder: "Fête de Caro" %>
 <%= f.submit "Add a playlist", class: 'btn btn-primary' %>
 <% end %>

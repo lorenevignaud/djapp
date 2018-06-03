@@ -1,2 +1,22 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "playlists/index";
+@import "playlists/show";
+
+
+//SCSS for the whole app
+.wrapper {
+  margin: 20px;
+}
+
+.back-btn {
+  margin-top: 30px;
+  a {
+    padding-left: 0px;
+  }
+}
+
+.inline-btn {
+  display: flex;
+  align-items: center;
+}

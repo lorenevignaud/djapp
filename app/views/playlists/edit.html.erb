@@ -1,6 +1,17 @@
+<div class="back-btn">
+  <%= link_to "Back to all playlists", playlists_path, class: 'btn btn-light' %>
+</div>
+
 <h1>Edit the playlist</h1>
 
 <%= simple_form_for [@playlist] do |f| %>
 <%= f.input :title %>
-<%= f.submit "Change the title", class: 'btn btn-primary' %>
+<div class="inline-btn">
+  <%= f.submit "Change the title", class: 'btn btn-primary' %>
 <% end %>
+  <div class="action">
+    <%= link_to "Cancel", playlists_path, class: 'btn btn-light' %>
+  </div>
+</div>
+
+
