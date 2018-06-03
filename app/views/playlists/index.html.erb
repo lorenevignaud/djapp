@@ -3,4 +3,9 @@
 
 <% @playlists.each do |playlist| %>
 <h2> <%= playlist.title %></h2>
+<% link_to playlist_path(playlist)  %>
 <% end %>
+
+<%= link_to "Back to home", playlists_path %>
+
+
