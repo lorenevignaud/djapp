@@ -1,0 +1,10 @@
+<h1>Songs#index</h1>
+<p>Find me in app/views/songs/index.html.erb</p>
+
+<%= form_tag songs_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Find a song"
+  %>
+<% end %>
